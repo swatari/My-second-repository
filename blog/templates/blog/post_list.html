@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>千波付近注意喚起情報</title>
+    </head>
+    <body>
+
+	<div>
+	    <h1><a href="/">千波付近注意喚起情報</a></h1>
+	</div>
+
+	{% for post in posts %}
+	    <div>
+ 	       <p>published: {{ post.published_date }}</p>
+	        <h1><a href="">{{ post.title }}</a></h1>
+ 	       <p>{{ post.text|linebreaksbr }}</p>
+	    </div>
+	{% endfor %}
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </div>
+    </body>
+</html>
