@@ -13,4 +13,9 @@ class Post(models.Model):
         self.save()
     def __str__(self):
         return self.title
-
+    def first_line(self):
+            line_list = self.text.split('\n')
+            return line_list[0]
+    def link2map(self):
+            line_list = self.text.split('\n')
+            return "https://www.google.co.jp/maps/search/"+line_list[0]
