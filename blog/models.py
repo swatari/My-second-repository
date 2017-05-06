@@ -18,4 +18,4 @@ class Post(models.Model):
             return line_list[0]
     def link2map(self):
             line_list = self.text.split('\n')
-            return "https://www.google.co.jp/maps/search/"+line_list[0]
+            return "https://www.google.com/maps/embed/v1/search?key=AIzaSyCo5C_ndWSOe_gZGlxNWkL5Cc-GR01fUS0&zoom=16&q="+line_list[0]

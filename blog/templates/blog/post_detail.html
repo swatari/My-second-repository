@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+	<iframe
+        	 width="600"
+        	 height="450"
+        	 frameborder="0" style="border:0"
+        	 src="{{ post.link2map }}">
+	</iframe>
+    </div>
+{% endblock %}
+

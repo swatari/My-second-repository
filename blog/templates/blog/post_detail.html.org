@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+<iframe
+ width="600"
+ height="450"
+ frameborder="0" style="border:0"
+ src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCo5C_ndWSOe_gZGlxNWkL5Cc-GR01fUS0&center=35.7943492,139.7925433&zoom=16&q=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3">
+</iframe>
+    </div>
+{% endblock %}
+
