@@ -16,5 +16,14 @@
         	 src="{{ post.link2map }}">
 	</iframe>
     </div>
+    <div>
+        <p> 類似の事案があります。</p>
+	 {% for post in posts %}
+ 	   <div class="post">
+	       <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+               <p>{{ post.text|linebreaksbr }}</p>
+	    </div>
+	 {% endfor %}
+    </div>
 {% endblock %}
 
